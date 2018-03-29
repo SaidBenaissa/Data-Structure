@@ -1,6 +1,7 @@
-""" 2: Algorithms
+"""
+  2: Algorithms
 
-    thomas moll 2015
+    Thomas Moll 2015
 """
 import time, random
 
