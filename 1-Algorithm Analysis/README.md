@@ -1,5 +1,4 @@
 # 2: Algorithm Analysis
-
 ![Imgur](http://i.imgur.com/pL6nSPE.png)
 [ Time's a-ticking! ]
 
@@ -77,7 +76,7 @@ def binary_search(arr, item):
     return found
 ```
 
-Can you guess what this function's running time is? Let's take a crack at it.
+Can you guess what this function's running time is ? Let's take a crack at it.
 There's a loop, so we can put an n down. However, if you take a look at the condition,
 it won't always be iterating through the entire list. In fact every time an iteration
 happens the problem set is cut in half. Take the limit as n goes to infinity given ``n/(2^i)``
