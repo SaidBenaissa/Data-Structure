@@ -85,7 +85,7 @@ But first, I highly urge you to run the following in your Python interpreter:
 """
 
 Funny right? Alright let's look at what a "well-formed" set of parenthesis looks like. """{[(({}[]))]}""" Notice how 
-every opening parenthesis has a closing one? """{{()}[]}}]}""" This one just looks terrible. Now let's figure out an
+every opening parenthesis has a closing one? """{{()}[]}}]}}}""" This one just looks terrible. Now let's figure out an
 algorithm to break this problem down.
 
 We're going to first iterate over the entire parenthesis string. Easy enough, use a ``for char in string:`` and you
