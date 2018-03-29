@@ -1,6 +1,8 @@
 """ 3: Sorting test file
 
     thomas moll 2015
+
+    You need to install django-sort package using the termial command: pip install django-sort
 """
 
 import unittest
