@@ -17,33 +17,33 @@ goes along nicely with the aforementioned. However, what's all this pushing and 
 and peeking about? Let's first take a look at ``push()``. Imagine the stack like a
 PEZ dispenser.
 
-```
+"""
     |    |
     |    |  <- Stack
     |    |
     ------
-```
+"""
 
 Let's ``push()`` the number 42 and the number 21 and see what happens!
-```
+"""
       42                    21
       \/                    \/
     |    |     |    |     |    |     |    |
     |    |  >  |    |  >  |    |  >  | 21 |
     |    |  >  | 42 |  >  | 42 |  >  | 42 |
     ------     ------     ------     ------
-```
+"""
 
 The 42 "falls" to the bottom of the stack, then the 21 sits on top. Can you guess
 what will happen when we call ``pop()``?
-```
+"""
                  21                    42
                  /\                    /\
     |    |     |    |     |    |     |    |
     | 21 |  >  |    |  >  |    |  >  |    |
     | 42 |  >  | 42 |  >  | 42 |  >  |    |
     ------     ------     ------     ------
-```
+"""
 
 The order that we pushed the numbers into the stack was the opposite of the order
 we popped them. (p.s. We can use ``peek()`` to see what's on top) Before we get
@@ -58,14 +58,14 @@ already? Let's pull up that diagram again. I'll show you what the sequence of ev
 looks like for the example that we did earlier. It's a slightly modified ``append()`` 
 except we insert our new variable at the top.
 
-```
+"""
     # push(42)
     self.top->[42]->None
 
     # push(21)
     self.top->[21]->[42]->None
 
-```
+"""
 
 That way the ``self.top`` variable points to the top of our stack! If you're clever, we can
 use ``self.top`` to easily implement our ``peek()`` method. ``pop()`` is even easier, we simply
@@ -80,9 +80,9 @@ and went to compile and it wouldn't work because you were missing a bracket? OF 
 problem that can be solved with Stacks.
 
 But first, I highly urge you to run the following in your Python interpreter:
-```python
+"""python
     >>> from __future__ import braces
-```
+"""
 
 Funny right? Alright let's look at what a "well-formed" set of parenthesis looks like. "{[(({}[]))]}" Notice how 
 every opening parenthesis has a closing one? "{{()}[]}}]}" This one just looks terrible. Now let's figure out an
@@ -93,7 +93,7 @@ should be good. Notice the ``brackets`` dictionary, we establish the relationshi
 and closing parenthesis. We can also iterate over both keys and values! So for each character we
 check to see if it's in the keys first, if so we push it.
 
-```python
+"""python
     # See stack.py for a more commented version
     def check_parenthesis(string):
         stack = Stack()
@@ -114,7 +114,7 @@ check to see if it's in the keys first, if so we push it.
             return False
         else:
             return True
-```
+"""
 
 Don't worry if it looks intimidating! If it's a closing parenthesis, we check to see 
 that it has a matching pair on the ``Stack`` by calling ``pop()`` and using our neat
@@ -130,7 +130,7 @@ encounter an operator we'll pop the two items off the stack and evaluate them us
 then we'll push the value back onto the stack. Below is the source, and as always feel free to read
 the comments and break things in ``stack.py``
 
-```python
+"""python
 def postfix_eval(string):
     stack = Stack()
     ops = {'+': lambda a, b: a + b,
@@ -159,7 +159,7 @@ def postfix_eval(string):
     if stack.size > 1:
         raise ValueError()
     return stack.pop()
-```
+"""
 
 Before we move on to Queues, I'll note a few Pythonic things about the method above. First,
 the dictionary with our operations. It takes advantage of ``lambda``, without going into too
