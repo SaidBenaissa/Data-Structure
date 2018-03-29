@@ -1,4 +1,5 @@
 """
+                            Adapted for Python 3 
   2: Algorithms
 
     Thomas Moll 2015
