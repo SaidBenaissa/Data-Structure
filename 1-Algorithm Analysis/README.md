@@ -84,3 +84,4 @@ happens the problem set is cut in half. Take the limit as n goes to infinity giv
 and you get log(n). Making our function run in O(log(n)) time, and if you graph these
 two functions with reasonably large sets of numbers you'll see that n^2 goes to infinity
 much quicker than log(n), making this search more efficient.
+}}
