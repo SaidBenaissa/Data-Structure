@@ -34,4 +34,4 @@ run the test.py file, practice using the objects in another file (using ``import
 
 If you find an error in my writing or python files feel free to create an issue, or if you're savy create a pull request with the fix.
 Thanks for reading!
-
+</br>
